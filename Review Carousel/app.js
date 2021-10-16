@@ -44,18 +44,49 @@ const author = document.getElementById('author');
 const job = document.getElementById('job');
 const info = document.getElementById('info');
 
-const prevBtn = document.querySelector('prev-btn');
-const nextBtn = document.querySelector('next-btn');
-const randomBtn = document.querySelector('random-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
 
 // set starting item
 let startingItem = 0;
 
 // load initial item
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener("DOMContentLoaded", function(){
+    showPerson();
+})
+
+// show person based on item #
+
+function showPerson(){
     const item = reviews[startingItem];
     img.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
-    info.textContent =
-})
+    info.textContent = item.text;
+}
+
+// show next person
+
+nextBtn.addEventListener('click', function(){
+    startingItem++;
+    if(startingItem > reviews.length - 1){
+        startingItem = 0;
+    }
+    showPerson();
+});
+
+prevBtn.addEventListener('click', function(){
+    startingItem--;
+    if(startingItem < 0){
+        startingItem = reviews.length - 1;
+    }
+    showPerson();
+});
+
+// show random person
+randomBtn.addEventListener('click', function(){
+    // get random number 0-3
+    startingItem = Math.floor(Math.random() * reviews.length);
+    showPerson(startingItem);    
+});
