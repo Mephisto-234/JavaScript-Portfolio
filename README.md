@@ -1,6 +1,7 @@
 # JavaScript-Portfolio
-Just a bunch of simple tutorials I've done to level up my JS
+Just a bunch of simple tutorials I've done to level up my JS.
 
+Part 1 - Tutorials
 John Smilga tutorials https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s
     Counter
     Random Color Generator
@@ -8,3 +9,6 @@ John Smilga tutorials https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s
 
 FreeCodeCamp tutorial by whatsdev https://www.youtube.com/watch?v=jaVNP3nIAv0
     Rock-Paper-Scissors
+
+
+Part 2 - Inspired Works
